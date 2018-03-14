@@ -1,0 +1,86 @@
+html {
+    background-image: url("../images/burger.jpeg");
+}
+
+#buildBurger {
+    padding-top: 10%;
+}
+
+#burgerButton:hover {
+    cursor: pointer;
+    transform: translate(5px, 5px);
+    transition: box-shadow 1s, transform 2s;
+}
+
+#burgerButton {
+    border: 2px groove green;
+    background-color: red;
+    border-radius: 10px;
+    color: yellow;
+    font-size: 18px;
+    margin: 1%;
+    padding: 1%;
+    transition: box-shadow 1s, transform 2s;
+}
+
+#burgerForm {
+    text-align: center;
+}
+
+#burgerInput {
+    font-size: 2em;
+    padding: 1%;
+    width: 30%;
+}
+
+#devourBurger {
+    background-color: bisque;
+    border: 2px solid blue;
+    float: right;
+}
+
+#devourButton {
+    border: 2px groove green;
+    background-color: red;
+    border-radius: 10px;
+    color: yellow;
+    font-size: 18px;
+    margin: 1%;
+    padding: 1%;
+    transition: box-shadow 1s, transform 1s;
+}
+
+#devourButton:hover {
+    cursor: pointer;
+    transform: translate(2px, 2px);
+    transition: box-shadow 1s, transform 1s;
+}
+
+#eatenBurgers {
+    background-color: bisque;
+    border: 2px solid blue;
+    float: left;
+}
+
+h1 {
+    color: white;
+    font-size: 5em;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+input[type=text]:focus {
+    border: 3px solid #555;
+    text-align: center;
+}
+
+span {
+    background-color: bisque;
+    padding: 1%;
+}
+
