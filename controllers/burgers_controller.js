@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var burger = require('../models/burger.js');
 var db = require('../models');
+var sequelize = require('sequelize');
 
 router.get('/', function (req, res) {
     res.redirect('/burgers')
@@ -17,8 +18,7 @@ router.get("/burgers", function (req, res) {
         order: [
             ["burger_name", "ASC"]
         ]
-    })
-        .then(function (dbBurger) {
+    }).then(function (dbBurger) {
             var hbsObject = {
                 burger: dbBurger
             };
@@ -61,7 +61,7 @@ router.put('/burgers/update', function (req, res) {
 });
 
 router.post('/burgers/create', function (req, res) {
-    burger.create(req.body.burger_name, function (result) {
+    db.Burger.create(req.body.burger_name, function (result) {
         res.redirect('/');    
     });
 });
