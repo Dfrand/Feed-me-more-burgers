@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-    var Burger = sequelize.define("Burger",{
+    var BurgerNow = sequelize.define("BurgerNow", {
         burger_name: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -9,19 +9,12 @@ module.exports = function (sequelize, DataTypes) {
         },
         devoured: {
             type: DataTypes.BOOLEAN,
-            defaultValue: false
-        }
-    }, {
-            timestamps: false,
-            paranoid: true,
-            underscored: true,
-            freezeTableName: true
+            defaultValue: false,
+        },
+        createdAt: DataTypes.DATE,
+        updatedAt: DataTypes.DATE
 
+    });
 
-        });
-
-            Burger.associate = function (models) {
-                Burger.hasOne(models.Customer);
-            }
-        return Burger;
+    return BurgerNow;
 };
