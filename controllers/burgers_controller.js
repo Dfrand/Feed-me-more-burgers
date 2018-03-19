@@ -27,11 +27,11 @@ router.put("/burgers/update/?", function (req, res) {
             id: req.body.burger_id
         },
     }).then(function (result) {
-        if (result.changedRows === 0) {
-            return res.status(404).end();
-        } else {
-            res.status(200).end();
-        }
+        // if (result.changedRows === 0) {
+        //     return res.status(404).end();
+        // } else {
+        //     res.status(200).end();
+        // }
     });
     res.redirect('/');
 });
